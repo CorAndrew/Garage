@@ -30,12 +30,12 @@ namespace Garage
             }
             if (!int.TryParse(txtAnno.Text, out int anno))
             {
-                MessageBox.Show("Inserisci un anno valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Inserisci un anno valido");
                 return;
             }
             if (!int.TryParse(txtCilindrata.Text, out int cyl))
             {
-                MessageBox.Show("Inserisci una cilindrata valida!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Inserisci una cilindrata valida");
                 return;
             }
 
@@ -47,7 +47,7 @@ namespace Garage
             {
                 if (!int.TryParse(txtPorte.Text, out int porte))
                 {
-                    MessageBox.Show("Inserisci un numero di porte valido!", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Inserisci un numero di porte valido");
                     return;
                 }
 
@@ -80,17 +80,17 @@ namespace Garage
 
             if (esito == 0)
             {
-                MessageBox.Show($"Veicolo inserito con successo nel posto {posto}!", "Operazione Completata", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Veicolo inserito con successo nel posto {posto}");
                 txtMarca.Clear();
                 AggiornaListaGarage();
             }
             else if (esito == -1)
             {
-                MessageBox.Show("Il numero del posto deve essere compreso tra 0 e 14!", "Errore Posto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Il numero del posto deve essere compreso tra 0 e 14");
             }
             else if (esito == -2)
             {
-                MessageBox.Show($"Il posto {posto} è già occupato!", "Errore Inserimento", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Il posto {posto} è già occupato");
             }
         }
 
@@ -120,4 +120,4 @@ namespace Garage
             }
         }
     }
-}}
+}
